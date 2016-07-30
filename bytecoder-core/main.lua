@@ -70,7 +70,7 @@ love.load = function()
 				
 				local destinationfile = bytecoder.OutputFolder .. "/" .. file:sub( 1, file:len() - 4 ) .. bytecoder.OutputFiletype
 				
-				love.filesystem.write( bytecoder.OutputFolder .. "/" .. file:sub( 1, file:len() - 4 ) .. bytecoder.OutputFiletype, string.dump( chunk, false ) )
+				love.filesystem.write( destinationfile, string.dump( chunk, false ) )
 				
 				print( "[BYTECODER] ...saved new file \"" .. destinationfile .. "\"." )
 			
